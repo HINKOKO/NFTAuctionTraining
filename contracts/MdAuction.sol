@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "./IERC721Receiver.sol";
+// import "./IERC721Receiver.sol";
 import "./ERC721Holder.sol";
 import "./IMdNFT.sol";
 
@@ -116,17 +116,18 @@ contract MdAuction is Ownable, ERC721Holder {
 	} 
 
 
-	function checkStatus() public view returns(uint8 bi) {
+	function checkStatus() public view returns(uint8) {
 		if (auctionLength == 0) {
 			return uint8(AuctionState.CLOSED);
 		}
-		else if (block.timestamp > auctions[auctionLength - 1].endTime &&
-		contractState == AuctionState.EXPIRED) {
+		else if (
+			block.timestamp > auctions[auctionLength - 1].endTime &&
+			contractState == AuctionState.OPENED) {
 			// that means we reached endTime , no more bids allowed
 			return uint8(AuctionState.EXPIRED);
 		}
 		else {
-			uint8(contractState);
+			return uint8(contractState);
 		}
 	}
 
