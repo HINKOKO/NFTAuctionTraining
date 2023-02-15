@@ -2,8 +2,8 @@
 pragma solidity ^0.8.0;
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import "./IERC721Receiver.sol";
-import "./ERC721Holder.sol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "./IMdNFT.sol";
 
 contract MdAuction is Ownable, ERC721Holder {
