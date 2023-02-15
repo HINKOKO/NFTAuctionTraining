@@ -81,7 +81,7 @@ interface IERC20 {
     ) external returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
+
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)
 /**
  * @dev Interface for the optional metadata functions from the ERC20 standard.
@@ -105,7 +105,7 @@ interface IERC20Metadata is IERC20 {
     function decimals() external view returns (uint8);
 }
 
-// SPDX-License-Identifier: MIT
+
 // OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
 /**
  * @dev Provides information about the current execution context, including the
@@ -127,7 +127,7 @@ abstract contract Context {
     }
 }
 
-// SPDX-License-Identifier: MIT
+
 // OpenZeppelin Contracts (last updated v4.8.0) (token/ERC20/ERC20.sol)
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -510,7 +510,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     ) internal virtual {}
 }
 
-// SPDX-License-Identifier: MIT
+
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/extensions/ERC20Burnable.sol)
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
@@ -544,7 +544,7 @@ abstract contract ERC20Burnable is Context, ERC20 {
     }
 }
 
-// SPDX-License-Identifier: MIT
+
 // OpenZeppelin Contracts (last updated v4.7.0) (access/Ownable.sol)
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -623,7 +623,7 @@ abstract contract Ownable is Context {
     }
 }
 
-// SPDX-License-Identifier: MIT
+
 contract MdToken is ERC20, ERC20Burnable, Ownable {
     constructor() ERC20("MdToken", "MDT") {
 		mint(msg.sender, 10 ** 26);

@@ -24,7 +24,6 @@ interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.8.0) (token/ERC721/IERC721.sol)
 /**
  * @dev Required interface of an ERC721 compliant contract.
@@ -165,7 +164,6 @@ interface IERC721 is IERC165 {
     function isApprovedForAll(address owner, address operator) external view returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
 interface IMdNFT is IERC721 {
 	function mintValidTarget(address to, string memory uri) external returns (uint256);
 	function burn(uint256 tokenId) external;

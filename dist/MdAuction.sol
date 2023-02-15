@@ -23,7 +23,6 @@ abstract contract Context {
     }
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.7.0) (access/Ownable.sol)
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -102,7 +101,6 @@ abstract contract Ownable is Context {
     }
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.6.0) (token/ERC20/IERC20.sol)
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -182,7 +180,6 @@ interface IERC20 {
     ) external returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.6.0) (token/ERC721/IERC721Receiver.sol)
 /**
  * @title ERC721 token receiver interface
@@ -207,7 +204,6 @@ interface IERC721Receiver {
     ) external returns (bytes4);
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC721/utils/ERC721Holder.sol)
 /**
  * @dev Implementation of the {IERC721Receiver} interface.
@@ -231,7 +227,6 @@ contract ERC721Holder is IERC721Receiver {
     }
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)
 /**
  * @dev Interface of the ERC165 standard, as defined in the
@@ -254,7 +249,6 @@ interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.8.0) (token/ERC721/IERC721.sol)
 /**
  * @dev Required interface of an ERC721 compliant contract.
@@ -395,13 +389,11 @@ interface IERC721 is IERC165 {
     function isApprovedForAll(address owner, address operator) external view returns (bool);
 }
 
-// SPDX-License-Identifier: MIT
 interface IMdNFT is IERC721 {
 	function mintValidTarget(address to, string memory uri) external returns (uint256);
 	function burn(uint256 tokenId) external;
 }
 
-// SPDX-License-Identifier: MIT
 contract MdAuction is Ownable, ERC721Holder {
 	// MdNft contract so we need an uinterface of MdNFT
 	enum AuctionState {
